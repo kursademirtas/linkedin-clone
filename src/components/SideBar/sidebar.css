@@ -1,0 +1,75 @@
+.sidebar {
+	width: 225px;
+}
+
+.sidebar_top {
+	background-color: white;
+	border-radius: 8px;
+	border:1px gray solid;
+}
+
+.sidebar_bottom {
+	margin-top: 8px;
+	background-color: white;
+	border-radius: 8px;
+	border:1px gray solid;
+}
+
+.welcome {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-bottom: 1px solid gray;
+	padding-bottom: 1rem;
+} 
+
+.avatar {
+	background-color: white;
+	margin-top: -25px;
+	text-align: center;
+	padding: 1rem;
+	border-radius: 50%;
+	border: 1px solid gray;
+}
+
+.bg_wheat {
+	background: linear-gradient(to right, #43c6ac, #f8ffae); 
+	height: 50px;
+	width: 100%;
+	border-bottom: 1px solid gray;
+	border-top-right-radius: 8px;
+	border-top-left-radius: 8px;
+}
+
+.connections {
+	display: flex;
+	justify-content: space-around;
+	padding: 1rem 0;
+	align-items: center;
+	border-bottom: 1px solid gray;
+}
+
+.items {
+	display: flex;
+	padding: 1rem 0;
+	align-items: center;
+}
+
+
+.sidebar_menu {
+	display: flex;
+	justify-content: space-around;
+	line-height: 20px;
+	padding: 1rem 0;
+	border-bottom: 1px solid gray;
+}
+
+.add_btn {
+	align-self: center;
+}
+
+.sidebar_bottom p{
+	text-align: center;
+	margin: 0 auto;
+	padding: 1rem 0;
+}

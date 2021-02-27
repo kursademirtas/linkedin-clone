@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    background: #e9e5df;
+
+}
+.feed_layout {
+    padding: 49px 156px ;
+    display: flex;
+}
+li {
+    list-style: none;
+}

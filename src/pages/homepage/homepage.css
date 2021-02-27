@@ -1,0 +1,78 @@
+.homepage {
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	height: 100vh;
+
+}
+
+.homepage_header {
+	display: flex;
+	justify-content: space-between;
+	width: 80%;
+	margin:1rem auto;
+}
+
+.logo {
+	margin: 0 ;
+}
+
+.btn_join {
+	width: 127px;
+	padding: 0px 24px;
+	font-size: 1rem;
+	border: none;
+	background-color: transparent;
+	line-height: 40px;
+	color: rgba(0, 0,0, .6);
+	font-weight: 500;
+}
+.btn_login_small {
+	width: 127px;
+	border: 0.2px #0a66c2 solid;
+	font-size: 1rem;
+	border-radius: 24px;
+	box-shadow:#0a66c2 0px 0px 0px 1px;
+	color:#0a66c2;
+	padding: 0px 24px;
+	line-height: 40px;
+	background-color: transparent;
+	margin-left: 10px;
+	font-weight: 500;
+}
+
+.welcome_section {
+	width: 50%;
+	padding: 2rem;
+	display: flex;
+	margin-left: 3rem;
+
+}
+
+.welcome_title {
+	font-family: sans-serif;
+	font-size: 56px;
+	font-weight: 200;
+	line-height: 70px;
+	color:#0a66c2;
+	margin-bottom: 2rem;
+	
+}	
+
+.intent {
+	display: flex;
+	justify-content: space-between;
+	width: 408px;
+	padding: 1rem;
+	border-radius: 5px;
+	border:0.2px lightgray solid;
+	margin-top: 1rem;
+
+}
+.illustiration-homepage {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 700px;
+	left: 10;
+}

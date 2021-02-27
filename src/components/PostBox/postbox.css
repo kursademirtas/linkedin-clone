@@ -1,0 +1,40 @@
+.postBox_container {
+	background-color: white;
+	border-radius: 8px;
+	width: 546px;
+	height: min-content;
+	margin-left: 1rem;
+	border:1px solid lightgray;
+
+}
+.postBox_input {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 1rem 0 ;
+}
+
+.postBox_input input {
+	width: 452px;
+	height: 48px;
+	border-radius: 35px;
+	border:1px solid lightgray;
+	font-size: 24px;
+	color: black;
+}
+
+
+
+.postBox_menu {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+
+}
+
+.postBox_menu_item {
+	display: flex;
+	align-items: center;
+	padding: 0.5rem;
+	text-align: center;
+}
