@@ -8,6 +8,7 @@ export default function Logo() {
 			alt="linkedin icon"
 			width= "112px"
 			height= "28px"
+			margin="0"
 		/>
 	)
 }
