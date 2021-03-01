@@ -1,28 +1,26 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Logo from '../../components/Logo';
 import './homepage.css'
+import { useJobData } from '../../contexts/JobsDataContext'
+import PublicHeader from '../../components/PublicHeader';
+import SearchBar from '../../components/SearchBar';
 
 function Homepage() {
+	const { jobData } = useJobData();
+
+	
+
 	return (
 		<div className="homepage">
 
-			<header className="homepage_header">
-			<Logo />
-				<div>
-
-					<Link to="/login"><button className="btn_join">Join Now</button></Link>
-					<Link to="/login"><button className="btn_login_small">Sign in</button></Link>
-				</div>
-			</header>
-
+			<PublicHeader /> 
+		
 			<section className="welcome_section">
 				<div classname="welcome_intent">
 					<h2 className="welcome_title">Welcome to your professional community</h2>
 					<ul className="intent_container">
-						<li className="intent">Search for a job<span>></span></li>
-						<li className="intent">Find a person you know<span>></span></li>
-						<li className="intent">Learn a new skill<span>></span></li>
+						<li className="intent">Search for a job<span>&gt;</span></li>
+						<li className="intent">Find a person you know<span>&gt;</span></li>
+						<li className="intent">Learn a new skill<span>&gt;</span></li>
 					</ul>
 				</div>
 
