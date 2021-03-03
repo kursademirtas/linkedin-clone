@@ -8,6 +8,7 @@
 .job_list {
 	overflow-y: auto;
 	height: 100vh;
+	border-right: 1px solid lightgray;
 }
 .job_content {
 	display: flex;

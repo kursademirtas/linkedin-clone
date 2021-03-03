@@ -1,0 +1,96 @@
+.JobDetails_container {
+	height: 100vh;
+	overflow-y: scroll;
+	padding: 1rem;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	width: 589px;
+	height: 325px;
+	border: 0.5px solid lightgray;
+	border-radius: 8px;
+	padding: 24px;
+	line-height: 24px;
+
+}
+.desc_title,
+.title {
+	font-size: 24px;
+	line-height: 32px;
+}
+.card_info   {
+	display: flex;
+}
+.card_info >p {
+	margin-right: 10px;
+}
+
+.clr_primary {
+	color:#0a66c2;
+}
+
+
+.btn_apply {
+	margin-top: 20px;
+	background: #075baf;
+	color: white;
+	padding: 0 24px;
+	line-height: 40px;
+	text-align: center;
+	border: none;
+	border-radius: 48px;
+}
+
+.btn_save{
+	margin-top: 20px;
+	background: transparent;
+	color: #075baf;
+	padding: 0 24px;
+	margin-left: 10px;
+	border:1px solid #075baf;
+	border-radius: 48px;
+	line-height: 40px;
+}
+.desc_title {
+	padding: 1rem;
+}
+.description {
+	max-width: 589px;
+}
+
+.desc_text {
+	line-height: 24px;
+	color: rgba(0, 0, 0, 0.9);
+	font-size: 20px;
+	text-align: left;
+	padding: 1rem;
+}
+
+.btn_show {
+	color: rgba(0, 0, 0, 0.6); 
+	font-weight: 600 ;
+	background: transparent;
+	border: none;
+	padding: 0 24px;
+	line-height: 40px;
+
+}
+
+.desc_bottom {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 1rem;
+}
+
+.desc_bottom >p {
+	display: flex;
+	padding: 1rem;
+	flex-direction: column;
+	color: rgba(0, 0, 0, 0.6); 
+	font-size: 18px;
+}
+.desc_bottom >p>span {
+	color: black;
+}

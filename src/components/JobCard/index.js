@@ -7,7 +7,7 @@ const JobCard = ({ job, setCurrentJobId }) => {
 
 	const {id, Job_title, City, Company, Rating} = job;
 
-
+	console.log(job)
 	
 
 	return (
