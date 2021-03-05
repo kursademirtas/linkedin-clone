@@ -2,7 +2,9 @@ import React, {useRef, useState} from 'react';
 import { useAuth } from '../../contexts/AuthContext';
 import {Link, useHistory} from 'react-router-dom';
 import Logo from '../../components/Logo';
-import { Alert } from '@material-ui/lab'
+import { Alert } from '@material-ui/lab';
+
+import styles from './Signup.module.css';
 
 const Signup = () => {
 
@@ -31,26 +33,29 @@ const Signup = () => {
 
 
 	return (
-		<div className="signup_container">
-			<div>
+		<div className={styles.signup_container}>
+			<div className={styles.signup_text}>
 				<Logo />
-				<p className="signup_text">Make the most of your professional life</p>
+				<p >Make the most of your professional life</p>
 			</div>
 
-			<div className="signup_form_container">
+			<div className={styles.form_container}>
 				{error &&  <Alert severity="error">{error}</Alert>}
-				<form className="form_elements" onSubmit={handleSubmit}>
+				<form className={styles.form_elements} onSubmit={handleSubmit}>
 					<label htmlFor="email">Email</label>
-					<input className="signup_input" id="email"  type="email" ref={emailRef} required />
+					<input className={styles.input} id="email"  type="email" ref={emailRef} required />
 					<label htmlFor="password">Password(6 or more characters)</label>
-					<input className="signup_input"  id="password"  type="password" ref={passwordRef} required />
-					<button className="btn_primary">Forgot password?</button>
-					<input className="btn_signup" type="submit"  value="Agree and Join"/>
+					<input className={styles.input}  id="password"  type="password" ref={passwordRef} required />
+					<p className={styles.agreement}>By clicking Agree & Join, you agree to the LinkedIn User Agreement, Privacy Policy, and Cookie Policy.</p>	
+					<input className={styles.btn_signup} type="submit"  value="Agree and Join"/>
 				</form>
-				<span className="or">Or</span>
-				<button className="google-signin">Join with Google</button>
-				<p className="signup_text">Already on Linkedin?</p>
-				<button disabled={loading} className="btn_primary">Sign in</button>
+				<span className={styles.or}>Or</span>
+				<button className={styles.btn_google}><img src="https://i.stack.imgur.com/22WR2m.png" alt="google icon" className={styles.google_icon}/>Join with Google</button>
+				<div className={styles.signin}>
+					<p >Already on Linkedin?</p>
+					<button disabled={loading} className="btn_primary">Sign in</button>
+				</div>
+		
 			</div>
 
 	</div>

@@ -1,0 +1,108 @@
+.signup_container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: white;
+}
+
+.signup_text {
+	font-size: 32px;
+	text-align: center;
+	padding: 1rem;
+
+}
+.signup_text >p {
+	padding: 1rem;
+}
+.form_container {
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+	height: 400px;
+	border:0.5px lightgrey solid;
+	padding: 1rem;
+	border-radius: 8px;
+}
+
+.input {
+	width: 352px;
+	height: 32px;
+	border-radius: 4px;
+	border:1px solid gray;
+	
+}
+
+.btn_signup {
+	width: 352px;
+	height: 48px;
+	font-weight: 600;
+	background-color: #075baf;
+	color: white;
+	border:none;
+	border-radius: 24px;
+}
+
+.btn_google {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 352px;
+	height: 48px;
+	font-weight: 600;
+	background-color: white;
+	color: #075baf;
+	border: #075baf 1px solid;
+	border-radius: 24px;
+	
+
+}
+
+.or {
+	align-self: center;
+	padding: 1rem 0;
+	position: relative;
+	width: 100%;
+	text-align: center;
+
+}
+
+
+.or:after {
+	content: "";
+	width: 40%;
+	height: 1px;
+	background-color: lightgrey;
+	position: absolute;
+	right: 0;
+	bottom: 50%;
+}
+
+.or::before {
+	content: "";
+	width: 40%;
+	height: 1px;
+	background-color: lightgrey;
+	position: absolute;
+	left: 0;
+	bottom: 50%;
+}
+.agreement {
+	font-size: 14px;
+	color: gray;
+	text-align: center;
+	padding: 10px;
+}
+
+.google_icon {
+	width: 24px;
+	height: 24px;
+	margin-right: 10px;
+}
+
+.signin {
+	display: flex;
+	justify-content: center;
+	padding: 1rem 0;
+}

@@ -1,0 +1,9 @@
+.feed_container {
+	background-color: #f3f2ef;
+}
+
+.feed_body {
+	display: flex;
+	width: 80%;
+	margin: 49px auto;
+}

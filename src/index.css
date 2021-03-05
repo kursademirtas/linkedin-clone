@@ -9,10 +9,7 @@
     margin: 0;
     padding: 0;
 }
-.feed_layout {
-    padding: 49px 156px ;
-    display: flex;
-}
+
 li {
     list-style: none;
 }
