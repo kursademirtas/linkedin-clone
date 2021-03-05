@@ -7,6 +7,11 @@
 	border:1px solid lightgray;
 
 }
+.avatar_img {
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+}
 .postBox_input {
 	display: flex;
 	justify-content: space-around;
