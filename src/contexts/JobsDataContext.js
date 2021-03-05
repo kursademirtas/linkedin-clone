@@ -26,7 +26,7 @@ export  function JobDataProvider ({ children }) {
 		setJobData(collections)
 	}
 	 
-	//useEffect(() => {fetchData()},[])
+	useEffect(() => {fetchData()},[])
 
 	const value = {
 		jobData
