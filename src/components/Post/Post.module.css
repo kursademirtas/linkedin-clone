@@ -1,0 +1,41 @@
+.post_container {
+	width: 544px;
+	margin: 1rem ;
+	border: 0.3px lightgray solid;
+	border-radius: 8px;
+	background-color: white;
+}
+
+.post_img {
+	width: 100%;
+}
+
+.post_bottom {
+	display: flex;
+	color: rgba(0,0,0,0.5);
+	font-size: 14px;
+	font-weight: 700;
+	padding: 1rem 0;
+	position: relative;
+}
+
+.post_bottom:after {
+	content: "";
+	position: absolute;
+	width: 95%;
+	height: 0.5px;
+	background-color: lightgray;
+	top: 0;
+	margin-left: 2.5%;
+	
+}
+
+.post_icon {
+	display: flex;
+	align-items: center;
+	margin-left: 1rem;
+}
+
+.post_icon > span {
+	margin-left: 8px;
+}
