@@ -24,12 +24,12 @@
 } 
 
 .avatar {
+	width: 72px;
 	background-color: white;
-	margin-top: -25px;
+	margin-top: -36px;
 	text-align: center;
-	padding: 1rem;
 	border-radius: 50%;
-	border: 1px solid gray;
+
 }
 
 .bg_wheat {
