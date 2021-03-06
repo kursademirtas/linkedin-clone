@@ -1,0 +1,27 @@
+.footer_container {
+	display: flex;
+	width: 100%;
+	background-color: white;
+	justify-content: space-around;
+	position: absolute;
+	padding: 1rem 8rem;
+	bottom: 0;
+	left: 0;
+
+	align-items: center;
+}
+
+.footer_item {
+	font-size: 12px;
+	font-weight: 500;
+	cursor: pointer;
+	color: rgba(0, 0, 0, 0.9);
+	transition: all 0.2s;
+	
+}
+
+.footer_item:hover {
+	font-size: 12px;
+	color: #006097;
+	text-decoration: underline;
+}
