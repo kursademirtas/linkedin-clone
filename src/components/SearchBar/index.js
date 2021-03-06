@@ -1,6 +1,5 @@
 import React, { useState} from 'react'
 import { Search } from '@material-ui/icons';
-
 import styles from './searchBar.module.css';
 
 const SearchBar = () => {

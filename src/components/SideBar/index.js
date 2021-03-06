@@ -1,5 +1,5 @@
 import React from 'react';
-import {PhotoCamera, PersonAdd,TurnedIn, Add} from '@material-ui/icons';
+import { PersonAdd,TurnedIn, Add} from '@material-ui/icons';
 import  styles from './sidebar.module.css'
 
 const Sidebar = () => {
@@ -8,10 +8,7 @@ const Sidebar = () => {
 			<div className={styles.sidebar_top}>
 				<div className={styles.welcome}>
 					<div  className={styles.bg_wheat}/>
-	
 						<img className={styles.avatar} src="https://randomuser.me/api/portraits/women/40.jpg" alt="avatar"/>
-				
-				
 					<h3>Welcome, User</h3>
 					<a href="/">Add a Photo</a>
 				</div>
@@ -37,7 +34,6 @@ const Sidebar = () => {
 					<div className={styles.add_btn}>
 						<Add />
 					</div>
-				
 				</div>
 				<p>Discover More</p>
 			</div>

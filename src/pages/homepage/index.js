@@ -1,19 +1,15 @@
 import React from 'react';
-import './homepage.css'
-import { useJobData } from '../../contexts/JobsDataContext'
+
 import PublicHeader from '../../components/PublicHeader';
-import SearchBar from '../../components/SearchBar';
+
+
+import './homepage.css'
 
 function Homepage() {
-	const { jobData } = useJobData();
-
 	
-
 	return (
 		<div className="homepage">
-
 			<PublicHeader /> 
-		
 			<section className="welcome_section">
 				<div classname="welcome_intent">
 					<h2 className="welcome_title">Welcome to your professional community</h2>
@@ -23,7 +19,6 @@ function Homepage() {
 						<li className="intent">Learn a new skill<span>&gt;</span></li>
 					</ul>
 				</div>
-
 				<img src="https://static-exp1.licdn.com/sc/h/d58zfe6h3ycgq5l1ccjpkrtdn" alt="illustiration " className="illustiration-homepage"/>
 			</section>
 		

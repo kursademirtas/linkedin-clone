@@ -1,14 +1,9 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import React from 'react'
 import styles from './JobCard.module.css';
 
 const JobCard = ({ job, setCurrentJobId }) => {
 
-
 	const {id, Job_title, City, Company, Rating} = job;
-
-	console.log(job)
-	
 
 	return (
 	
