@@ -4,7 +4,8 @@
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
-	background-color: white;
+	background-color: #f3f2ef;
+	position: relative;
 }
 
 .signup_text {
@@ -13,6 +14,7 @@
 	padding: 1rem;
 
 }
+
 .signup_text >p {
 	padding: 1rem;
 }
@@ -20,10 +22,12 @@
 	display: flex;
 	flex-direction: column;
 	width: 400px;
-	height: 400px;
+	height: 474px;
 	border:0.5px lightgrey solid;
 	padding: 1rem;
 	border-radius: 8px;
+	background-color: white;
+	margin-bottom: 130px;
 }
 
 .input {
@@ -31,7 +35,7 @@
 	height: 32px;
 	border-radius: 4px;
 	border:1px solid gray;
-	
+	margin-top: -1rem;
 }
 
 .btn_signup {
@@ -42,8 +46,11 @@
 	color: white;
 	border:none;
 	border-radius: 24px;
+	cursor: pointer;
 }
-
+.btn_signup:hover {
+	background-color: #004182;
+}
 .btn_google {
 	display: flex;
 	justify-content: center;
@@ -55,9 +62,12 @@
 	color: #075baf;
 	border: #075baf 1px solid;
 	border-radius: 24px;
-	
-
+	cursor: pointer;
 }
+
+.btn_google:hover {
+	background-color: #ecf4fe;
+} 
 
 .or {
 	align-self: center;
@@ -88,6 +98,7 @@
 	left: 0;
 	bottom: 50%;
 }
+
 .agreement {
 	font-size: 14px;
 	color: gray;

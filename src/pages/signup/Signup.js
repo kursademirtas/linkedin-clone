@@ -1,10 +1,10 @@
 import React, {useRef, useState} from 'react';
 import { useAuth } from '../../contexts/AuthContext';
-import {Link, useHistory} from 'react-router-dom';
+import { useHistory} from 'react-router-dom';
 import Logo from '../../components/Logo';
 import { Alert } from '@material-ui/lab';
-
 import styles from './Signup.module.css';
+import Footer from '../../components/Footer';
 
 const Signup = () => {
 
@@ -24,21 +24,20 @@ const Signup = () => {
 			setLoading(true);
 			await signup(emailRef.current.value, passwordRef.current.value);
 			history.push("/feed");
-		} catch {
+		}catch {
 			setError("Failed to create an account")
 		}
-
 		setLoading(false);
 	}
 
 
 	return (
+
 		<div className={styles.signup_container}>
 			<div className={styles.signup_text}>
 				<Logo />
 				<p >Make the most of your professional life</p>
 			</div>
-
 			<div className={styles.form_container}>
 				{error &&  <Alert severity="error">{error}</Alert>}
 				<form className={styles.form_elements} onSubmit={handleSubmit}>
@@ -55,10 +54,11 @@ const Signup = () => {
 					<p >Already on Linkedin?</p>
 					<button disabled={loading} className="btn_primary">Sign in</button>
 				</div>
-		
 			</div>
+			<Footer />
+		</div>
+	
 
-	</div>
 	)
 }
 
