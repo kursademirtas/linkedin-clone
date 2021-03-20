@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 import JobCard from '../../components/JobCard';
 import JobDetails from '../../components/JobDetails';
-import PublicHeader from '../../components/PublicHeader'
-import { useJobData } from '../../contexts/JobsDataContext'
-import styles from './jobs.module.css'
+import PublicHeader from '../../components/PublicHeader';
+import { useJobData } from '../../contexts/JobsDataContext';
+import styles from './jobs.module.css';
 
 const Jobs = () => {
 
