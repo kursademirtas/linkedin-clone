@@ -1,0 +1,105 @@
+.modal {
+  height: 400px;
+  width: 552px;
+  border-radius: 16px;
+  position: absolute;
+  background-color: white;
+  left: 27%;
+  top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid black;
+}
+
+.modal .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0rem 1rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 552px;
+  height: 62px;
+  font-size: 20px;
+  border-bottom: 1px solid lightgray;
+}
+
+.modal .top span {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.modal .user_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem;
+  width: 552px;
+}
+
+.modal .user_info p {
+  padding: 0 1rem;
+  font-weight: 700px;
+  font-size: 24px;
+}
+
+.modal textarea {
+  font-size: 20px;
+  resize: none;
+  padding: 1rem;
+  border: none;
+}
+
+.modal .btn_blue {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  border: none;
+  padding: 0 1rem;
+  color: #0a66c2;
+  background-color: transparent;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.modal .wrapper {
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modal .buttons button {
+  margin-right: 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+}
+
+.modal .btn_gray {
+  padding: 0px 16px;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  background-color: #0a66c2;
+  color: #ffffff;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=PostInput.module.css.map */
