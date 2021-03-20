@@ -1,4 +1,5 @@
 import React from 'react'
+import { usePostData } from '../../contexts/PostDataContext'
 import PostBox from '../../components/PostBox'
 import Sidebar from '../../components/SideBar'
 import Header from '../../components/Header'
@@ -6,7 +7,9 @@ import styles from './feed.module.css'
 import Post from '../../components/Post'
 import Widgets from '../../components/Widgets'
 
-function feed() {
+const Feed = () => {
+	const { postData } = usePostData();
+	
 	return (
 		<div className={styles.feed_container}>
 			<Header />
@@ -14,7 +17,7 @@ function feed() {
 				<Sidebar />
 				<div>
 					<PostBox />
-					<Post />
+					{postData.map(post => <Post post={post}/>)}
 				</div>
 				<Widgets />
 			</div>
@@ -22,4 +25,4 @@ function feed() {
 	)
 }
 
-export default feed
+export default Feed;

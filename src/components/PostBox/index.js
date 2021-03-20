@@ -1,13 +1,15 @@
 import React from 'react'
 import {Event,  Photo, YouTube, Create} from '@material-ui/icons';
 import styles from  './postbox.module.css'
+import PostInput from '../PostInput';
+import Avatar from '../Avatar'
 
 const PostBox = () => {
 	return (
 		<div className={styles.postBox_container}>
 			<div className={styles.postBox_input}>
-				<img className={styles.avatar_img} src="https://randomuser.me/api/portraits/women/40.jpg" alt="avatar"/>
-				<input  type="text" placeholder="Start a post..." />
+				<Avatar size={'48px'}/>
+				<PostInput />
 			</div>
 			<div className={styles.postBox_menu}>
 				<div className={styles.postBox_menu_item}>
