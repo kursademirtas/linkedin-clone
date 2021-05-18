@@ -1,42 +1,49 @@
-import React, { useContext, useState, useEffect} from 'react';
-import { db } from '../firebaseConfig';
-import staticData from './staticdata';
+import React, { useContext, useState, useEffect } from "react";
+import { db } from "../firebaseConfig";
+import staticData from "./staticdata";
 
 //Similiar redux-createStore;
 const JobDataContext = React.createContext();
 
 export function useJobData() {
-	return useContext(JobDataContext);
+  return useContext(JobDataContext);
 }
 
-export  function JobDataProvider ({ children }) {
+export function JobDataProvider({ children }) {
+  const [jobData, setJobData] = useState(staticData);
+  const [searchResult, setSearchResult] = useState(jobData);
+  //Search another solution for fetch data.
+  const fetchData = async () => {
+    const citiesRef = db.collection("jobsData");
+    const snapshot = await citiesRef.get();
+    const collections = [];
+    snapshot.forEach((doc) => {
+      const data = Object.assign(doc.data(), { id: doc.id });
 
+      collections.push(data);
+    });
+    setJobData(collections);
+  };
 
-	const [jobData, setJobData] = useState(staticData);
-	//Search another solution for fetch data.
-	const fetchData = async () =>{
-		const citiesRef = db.collection('jobsData');
-		const snapshot = await citiesRef.get();
-		const collections = [];
-			snapshot.forEach(doc => {
-			const data = Object.assign(doc.data(), { id:doc.id })
-	
-			collections.push(data);
-		});
-		setJobData(collections)
-	}
-	 
-	useEffect(() => {fetchData()},[])
+  useEffect(() => {
+    fetchData();
+  }, []);
 
-	const value = {
-		jobData
-	}
+  const searchJob = (title, location) => {
+    setSearchResult(
+      jobData.filter((job) => {
+        return job.Job_title.includes(title) || job.City.includes(location);
+      })
+    );
+  };
 
-	return (
-		<JobDataContext.Provider value= {value}>
-			{ children }
-		</JobDataContext.Provider>
-	)
+  const value = {
+    jobData,
+    searchJob,
+    searchResult,
+  };
+
+  return (
+    <JobDataContext.Provider value={value}>{children}</JobDataContext.Provider>
+  );
 }
-
-
