@@ -1,0 +1,23 @@
+.personCard {
+	display: flex;
+	padding: 2rem;
+	border-bottom: 1px solid lightgray;
+	width: 70%;
+	min-width: 400px;
+	cursor: pointer;
+}
+
+.personCard:hover {
+	background-color: lightgray;
+}
+
+.personCard img {
+	width: 48px;
+	height: 48px;
+	border-radius: 48px;
+}
+
+.card_body {
+	padding: 0 1rem;
+	line-height: 24px;
+}
