@@ -1,21 +1,18 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import styles from './ModalForm.module.css';
 import Avatar from '../Avatar';
 import { Image, YouTube, Add, AddLocation } from '@material-ui/icons';
 import { usePostData } from '../../contexts/PostDataContext'
 
 
-const ModalForm = ({closeModal}) => {
+const ModalForm = ({ closeModal }) => {
 
-	
-	const {addPost, useStorage} = usePostData();
+	const { addPost, useStorage } = usePostData();
 	const [file, setFile] = useState(null);
-	const {progress, url} = useStorage(file);
 	const [postText, setPostText] = useState('');
 	const [postMedia, setPostMedia] = useState('');
     const [error, setError] = useState(null);
    
-	console.log(url)
 	const handleChange = (e) => {
 		const types = ["image/png", "image/jpeg", "image/jpg"];
         let selectedFile = e.target.files[0];
@@ -23,7 +20,6 @@ const ModalForm = ({closeModal}) => {
             if (types.includes(selectedFile.type)) {
                 setError(null);
                 setFile(selectedFile);
-				setPostMedia(url)
             } else {
                 setFile(null);
                 setError("Please select an image file (png or jpg)");
@@ -31,8 +27,17 @@ const ModalForm = ({closeModal}) => {
         }
     };
 
-	const sendPost = (text, media, time)  =>{
-		addPost({text, media, time})
+	
+	const { progress, url } = useStorage(file);
+
+	useEffect(() => {
+		setPostMedia(url)
+	},[url])
+
+
+	const sendPost = (text, media)  =>{
+		let date = new Date()
+		addPost({ text, media, date});
 		closeModal();
 	}
 	
@@ -57,10 +62,10 @@ const ModalForm = ({closeModal}) => {
 						<button> <YouTube /></button>
 						<button> <AddLocation /></button>
 					</div>
-					<button className={styles.btn_gray} onClick={() => sendPost(postText,postMedia, 'now')}>Post</button>
+					<button className={styles.btn_gray} onClick={() => sendPost(postText,postMedia)}>Post</button>
 				</div>
 		</div>
-	)
+	);
 }
 
 
