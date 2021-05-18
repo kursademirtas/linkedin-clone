@@ -14,7 +14,7 @@ function Homepage() {
 					<ul className="intent_container">
 						<Link to="/jobs"> <li className="intent">Search for a job<span>&gt;</span></li> </Link>
 						<Link to="/people" > <li className="intent">Find a person you know<span>&gt;</span></li></Link>
-						<Link to="/learn">	<li className="intent">Learn a new skill<span>&gt;</span></li></Link>
+						<Link to="/learning">	<li className="intent">Learn a new skill<span>&gt;</span></li></Link>
 					</ul>
 				</div>
 				<img src="https://static-exp1.licdn.com/sc/h/d58zfe6h3ycgq5l1ccjpkrtdn" alt="illustiration " className="illustiration-homepage"/>

@@ -5,6 +5,7 @@ import styles from './JobDetails.module.css';
 const JobDetails = ({ jobData,id }) => {
 	console.log(jobData)
 
+	//To-do: 
 	const current = jobData.find(item => item.id==id);
 	const [showMore, setShowMore] = useState(false)
 	const [validSalary, setValidSalary] = useState(false)
