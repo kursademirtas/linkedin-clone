@@ -8,10 +8,13 @@ export function usePostData() {
 }
 
 export function PostDataProvider({ children }) {
+
   const useStorage = (file) => {
     const [progress, setProgress] = useState(0);
     const [error, setError] = useState(null);
     const [url, setUrl] = useState(null);
+    const loading = progress===100 || progress===0 ? false : true 
+
     useEffect(() => {
       if (file) {
         const storageRef = projectStorage.ref(file.name);
@@ -35,7 +38,7 @@ export function PostDataProvider({ children }) {
       }
     }, [file]);
 
-    return { progress, url, error };
+    return { url, error, loading,progress };
   };
 
   const [postData, setPostData] = useState([]);
@@ -53,10 +56,11 @@ export function PostDataProvider({ children }) {
 
   useEffect(() => {
     fetchData();
-  }, [postData]);
+  }, []);
 
   const addPost = async (post) => {
     await db.collection("Post").add(post);
+    fetchData();
   };
 
   const value = {
