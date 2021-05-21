@@ -8,16 +8,16 @@ import styles from "./jobs.module.css";
 const Jobs = () => {
   const { jobData, searchJob, searchResult } = useJobData();
   const [currentJobId, setCurrentJobId] = useState(null);
+  const numberOfJobs = searchResult.length;
 
-  console.log(searchResult);
   return (
     <div className={styles.jobPage_container}>
       <PublicHeader search={searchJob} />
       <div className={styles.job_content}>
         <aside className={styles.job_list}>
-          <h2>+100 Result </h2>
-          {searchResult
-            ? searchResult.map((job) => (
+          <h2>{numberOfJobs} Result </h2>
+          {numberOfJobs
+            ? jobData.map((job) => (
                 <JobCard
                   job={job}
                   key={job.id}
