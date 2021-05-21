@@ -39,13 +39,15 @@
     margin-left: 10px;
     align-items: center;
     justify-content: center;
-
+    color: rgba(0,0,0,0.7);
+    transition: all 0.4s;
+    cursor: pointer;
 }
 
-.menu_item_container::after {
-    content: "";
-
+.menu_item_container:hover {
+    color: black;
 }
+
 
 .menu_item_container span {
     font-size: 12px;

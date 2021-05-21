@@ -1,9 +1,11 @@
 .feed_container {
 	background-color: #f3f2ef;
+	
 }
 
 .feed_body {
 	display: flex;
+	justify-content: center;
 	width: 80%;
 	margin: 49px auto;
 }

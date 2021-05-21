@@ -36,11 +36,11 @@ const Widgets = () => {
 				<ul>
 					<li>
 						The Six Morning Habits of High Performance
-						<span>Pete Mockaitis| How to Be Avesome</span>	
+						<span>Pete Mockaitis</span>	
 					</li>
 					<li>
 						Speaking Confidently and Effectively
-						<span>Pete Mockaitis| How to Be Avesome</span>	
+						<span>Pete Mockaitis</span>	
 					</li>
 					<li>
 						Unconsious Bias
