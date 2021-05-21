@@ -58,6 +58,24 @@
 	padding: 1rem;
 }
 
+.course_widgets li {
+	font-size: 15px;
+	font-weight: 600;
+	display: flex;
+	flex-direction: column;
+	padding:.3rem 0;
+	cursor: pointer;
+}
+.course_widgets li:hover{
+	background-color: #f3f2ef;
+
+}
+.course_widgets li span{
+	color:rgba(0, 0, 0, 0.6);
+	font-weight: 400;
+
+}
+
 .banner_widget >img{
 	width: 315px ;
 	margin-top: 10px;
