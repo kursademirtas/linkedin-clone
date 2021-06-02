@@ -1,4 +1,6 @@
 .feed_container {
+	display: flex;
+	flex-direction: column;
 	background-color: #f3f2ef;
 	
 }
@@ -7,5 +9,9 @@
 	display: flex;
 	justify-content: center;
 	width: 80%;
-	margin: 49px auto;
+	margin: 100px auto;
+}
+
+.flow{
+	overflow-x: scroll;
 }
