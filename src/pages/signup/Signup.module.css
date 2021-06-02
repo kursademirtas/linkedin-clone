@@ -117,3 +117,13 @@
 	justify-content: center;
 	padding: 1rem 0;
 }
+
+
+
+.btn_primary {
+	background-color: transparent;
+	color: #0a66c2;
+	width: fit-content;
+	border: none;
+	padding: 0 .5rem;
+}

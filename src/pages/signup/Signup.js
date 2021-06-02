@@ -1,6 +1,6 @@
 import React, {useRef, useState} from 'react';
 import { useAuth } from '../../contexts/AuthContext';
-import { useHistory} from 'react-router-dom';
+import { Link, useHistory} from 'react-router-dom';
 import Logo from '../../components/Logo';
 import { Alert } from '@material-ui/lab';
 import styles from './Signup.module.css';
@@ -52,7 +52,7 @@ const Signup = () => {
 				<button className={styles.btn_google}><img src="https://i.stack.imgur.com/22WR2m.png" alt="google icon" className={styles.google_icon}/>Join with Google</button>
 				<div className={styles.signin}>
 					<p >Already on Linkedin?</p>
-					<button disabled={loading} className="btn_primary">Sign in</button>
+					<Link to='/login' disabled={loading} className={styles.btn_primary}>Sign in</Link>
 				</div>
 			</div>
 			<Footer />
