@@ -16,7 +16,7 @@
 	background-color: white;
 	padding: 1rem;
 	border-radius: 8px;
-	box-shadow:#000000 0px 4px 12px 0px
+	box-shadow:rgba(0, 0, 0, .4) 0px 4px 12px 0px;
 }
 form {
 	display: flex;
@@ -32,6 +32,7 @@ form {
 	align-self: center;
 	border: 1px solid black;
 	margin-bottom: -40px;
+	padding: 0 .5rem;
 }
 
 
@@ -40,6 +41,7 @@ form {
 	color: #0a66c2;
 	width: fit-content;
 	border: none;
+	padding: 0 1rem;
 }
 
 .btn_login {
@@ -50,4 +52,10 @@ form {
 	border: none;
 	padding: 1rem;
 
+}
+
+.wrapper { 
+	display: flex;
+	justify-content: center;
+	padding: 1rem 0;
 }
