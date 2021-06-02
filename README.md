@@ -4,11 +4,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Todo's
 
-1- Add post data firebase 
-2- Make animation some page
-3- Add tetwork and education page
+
 4- Add profile settings
-5-Add search for jobs listing
+
 
 ### `yarn start`
 

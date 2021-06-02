@@ -12,6 +12,7 @@ import { PostDataProvider } from "./contexts/PostDataContext";
 import LearningPage from "./pages/learning";
 import PeoplePage from "./pages/people";
 import { PeopleDataProvider } from "./contexts/PeopleDataContext";
+import ResetPage from "./pages/resetPassword";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
                   <Route path="/" exact component={Homepage} />
                   <Route path="/signup" component={Signup} />
                   <Route path="/login" component={Login} />
+                  <Route path='/resetpassword' component={ResetPage} />
                   <Route path="/jobs" component={Jobs} />
                   <Route path="/learning" component={LearningPage} />
                   <Route path="/people" component={PeoplePage} />
