@@ -4,7 +4,7 @@ import PublicHeader from '../../components/PublicHeader'
 const LearningPage = () => {
 	return (
 		<div>
-			<PublicHeader learningPage  />
+			<PublicHeader learningPage withSearch />
 		</div>
 	)
 }

@@ -27,7 +27,7 @@ const PeoplePage = () => {
 
   return (
     <div className={styles.page_container}>
-      <PublicHeader peoplePage={true} search={searchPerson} />
+      <PublicHeader peoplePage={true} search={searchPerson} withSearch/>
       {numberOfPerson ? (
         searchResult.map((person) => {
           return <PersonCard key={person.id} person={person}/>;

@@ -12,7 +12,7 @@ const Jobs = () => {
 
   return (
     <div className={styles.jobPage_container}>
-      <PublicHeader search={searchJob} />
+      <PublicHeader search={searchJob} withSearch/>
       <div className={styles.job_content}>
         <aside className={styles.job_list}>
           <h2>{numberOfJobs} Result </h2>
