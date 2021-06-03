@@ -4,7 +4,7 @@ import { Link, useHistory } from "react-router-dom";
 import styles from "./publicHeader.module.css";
 import SearchBar from "../SearchBar";
 
-const PublicHeader = ({ learningPage, peoplePage, search }) => {
+const PublicHeader = ({ learningPage, peoplePage, search, withSearch }) => {
   const initialOption = peoplePage
     ? "people"
     : learningPage
@@ -18,9 +18,9 @@ const PublicHeader = ({ learningPage, peoplePage, search }) => {
     <header className={styles.header}>
       <Logo className={styles.logo} />
       <div className={styles.searchBar}>
-        {path !== "/" ? (
+        {withSearch && (
           <SearchBar initialOption={initialOption} search={search} />
-        ) : null}
+        )}
       </div>
       <div>
         <Link to="/signup">
