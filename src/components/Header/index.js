@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import "./header.css";
 import {
   Message,
@@ -12,6 +12,8 @@ import {
   Person,
 } from "@material-ui/icons/";
 import { Link } from "react-router-dom";
+import Modal from "react-modal";
+import Dropdown from "../Dropdown";
 
 function Header() {
   return (
@@ -36,11 +38,11 @@ function Header() {
             <span>My Network</span>
           </div>
         </Link>
-        <Link to='/jobs'>
-        <div className="menu_item_container">
-          <Work style={{ fontSize: 24 }} />
-          <span>Jobs</span>
-        </div>
+        <Link to="/jobs">
+          <div className="menu_item_container">
+            <Work style={{ fontSize: 24 }} />
+            <span>Jobs</span>
+          </div>
         </Link>
         <div className="menu_item_container">
           <Message style={{ fontSize: 24 }} />
@@ -51,8 +53,7 @@ function Header() {
           <span>Notifications</span>
         </div>
         <div className="menu_item_container">
-          <Person style={{ fontSize: 24 }} />
-          <span>Me</span>
+          <Dropdown />
         </div>
         <div className="menu_item_container border_left">
           <Apps style={{ fontSize: 24 }} />

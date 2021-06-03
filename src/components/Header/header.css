@@ -3,9 +3,11 @@
  justify-content: space-around;
  border-bottom: 1px solid gray;
  height: 52px;
- position: sticky;
+ position: fixed;
+ top: 0;
+ width: 100%;
  background-color: white;
-
+ z-index: 99;
 }
 
 .header_left {
@@ -42,6 +44,7 @@
     color: rgba(0,0,0,0.7);
     transition: all 0.4s;
     cursor: pointer;
+    position: relative;
 }
 
 .menu_item_container:hover {
