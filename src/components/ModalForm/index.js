@@ -3,6 +3,7 @@ import styles from "./ModalForm.module.css";
 import Avatar from "../Avatar";
 import { Image, YouTube, Add, AddLocation } from "@material-ui/icons";
 import { usePostData } from "../../contexts/PostDataContext";
+import UserAvatar from "../UserAvatar";
 
 const ModalForm = ({ closeModal }) => {
   const { addPost, useStorage } = usePostData();
@@ -27,7 +28,6 @@ const ModalForm = ({ closeModal }) => {
 
   const { loading, url, progress } = useStorage(file);
 
-  console.log(progress);
   useEffect(() => {
     setPostMedia(url);
   }, [url]);
@@ -38,24 +38,28 @@ const ModalForm = ({ closeModal }) => {
     closeModal();
   };
 
+  const addHashtag = () => {
+    setPostText(postText + '#');
+  }
+
   return (
     <div>
       <div className={styles.top}>
         <h2>Create a post</h2>
         <span onClick={() => closeModal()}>X</span>
       </div>
-      <div className={styles.user_info}>
-        <Avatar size={"48px"} />
-        <p>Alexa Siri</p>
+      <UserAvatar />
+      <div className={styles.column_wrapper}>
+        <textarea
+          onChange={(e) => setPostText(e.target.value)}
+          value={postText}
+          cols="20"
+          rows="5"
+          placeholder="What do you want to talk about?"
+        />
+        <button onClick={addHashtag} className={styles.btn_blue}>Add hashtag</button>
       </div>
-      <textarea
-        onChange={(e) => setPostText(e.target.value)}
-        value={postText}
-        cols="20"
-        rows="5"
-        placeholder="What do you want to talk about?"
-      />
-      <button className={styles.btn_blue}>Add hashtag</button>
+
       <div className={styles.wrapper}>
         <div className={styles.buttons}>
           <button>
@@ -81,7 +85,7 @@ const ModalForm = ({ closeModal }) => {
           </button>
         </div>
         <button
-		  disabled={loading}
+          disabled={loading}
           className={styles.btn_gray}
           onClick={() => sendPost(postText, postMedia)}
         >
