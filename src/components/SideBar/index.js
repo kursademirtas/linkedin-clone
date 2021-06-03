@@ -2,7 +2,11 @@ import React from 'react';
 import { PersonAdd,TurnedIn, Add} from '@material-ui/icons';
 import  styles from './sidebar.module.css'
 
-const Sidebar = () => {
+const Sidebar = ({scrollY}) => {
+
+	const isTop = scrollY < -325 ? true : false;
+	const bottomBarStyle = isTop ? styles.sidebar_fixed : styles.sidebar_bottom
+	
 	return (
 		<div className={styles.sidebar}>
 			<div className={styles.sidebar_top}>
@@ -24,7 +28,7 @@ const Sidebar = () => {
 					<h4 >My Items</h4>
 				</div>
 			</div>
-			<div className={styles.sidebar_bottom}>
+			<div className={bottomBarStyle}>
 				<div className={styles.sidebar_menu}>
 					<ul>
 						<li>Groups</li>

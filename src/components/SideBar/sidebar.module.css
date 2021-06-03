@@ -12,7 +12,12 @@
 	margin-top: 8px;
 	background-color: white;
 	border-radius: 8px;
-	border:1px gray solid;
+	border:1px gray solid;	
+}
+
+.sidebar_fixed {
+	position: fixed;
+	
 }
 
 .welcome {
