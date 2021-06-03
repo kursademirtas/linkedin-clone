@@ -4,14 +4,14 @@ import styles from "./searchBar.module.css";
 import { useJobData } from "../../contexts/JobsDataContext";
 
 const SearchBar = ({ initialOption, search }) => {
-  const [firstValue, setFirstValue] = useState(null);
-  const [secondValue, setSecondValue] = useState(null);
+  const [firstValue, setFirstValue] = useState('');
+  const [secondValue, setSecondValue] = useState('');
 
- function handleClick (e) {
-	e.preventDefault();
-	search(firstValue, secondValue);
-	setFirstValue(null);
-	setSecondValue(null);
+  function handleClick(e) {
+    e.preventDefault();
+    search(firstValue, secondValue);
+    setFirstValue('');
+    setSecondValue('');
   }
 
   const [currentOption, setCurrentOption] = useState(initialOption);
@@ -48,7 +48,11 @@ const SearchBar = ({ initialOption, search }) => {
         value={secondValue}
         onChange={(e) => setSecondValue(e.target.value)}
       />
-      <button type="submit" className={styles.search_button} onClick={(e) => handleClick(e)}>
+      <button
+        type="submit"
+        className={styles.search_button}
+        onClick={(e) => handleClick(e)}
+      >
         <Search />
       </button>
     </form>
